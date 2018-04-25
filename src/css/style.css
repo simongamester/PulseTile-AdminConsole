@@ -179,14 +179,14 @@ sup {
 }
 
 a {
-  color: #20a8d8;
+  color: #f46631;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #167495;
+  color: #ce400b;
   text-decoration: underline;
 }
 
@@ -2920,12 +2920,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #20a8d8;
+  color: #f46631;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #167495;
+  color: #ce400b;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
@@ -4656,14 +4656,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #20a8d8;
+  color: #f46631;
   background-color: #fff;
   border: 1px solid #c8ced3;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #167495;
+  color: #ce400b;
   text-decoration: none;
   background-color: #e4e7ea;
   border-color: #c8ced3;
@@ -11595,7 +11595,7 @@ canvas {
 }
 
 .sidebar .nav-link.active .nav-icon {
-  color: #20a8d8;
+  color: #f46631;
 }
 
 .sidebar .nav-link:hover {
@@ -14175,5 +14175,70 @@ body {
 *[dir="rtl"] .dropdown-item .badge {
   right: auto;
   left: 10px;
+}
+
+.jumbotron-fluid {
+  padding: 2rem 0 0 0;
+  padding-bottom: 0;
+}
+
+#dashboard .intro-links {
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#dashboard .intro-links .col {
+  margin-bottom: 1rem;
+}
+
+#dashboard .intro-links i {
+  color: #c2c2c2;
+  font-size: 3.5rem;
+}
+
+#dashboard .intro-links a:hover {
+  text-decoration: none;
+}
+
+#dashboard .intro-links a:hover i {
+  color: #f46631;
+}
+
+#dashboard .intro-links .display-4 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  #dashboard .intro-links .display-4 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #dashboard .intro-links .display-4 {
+    font-size: 2rem;
+  }
+}
+
+#dashboard .intro-links p.lead {
+  font-size: 0.85rem;
+}
+
+@media (min-width: 992px) {
+  #dashboard .intro-links p.lead {
+    font-size: 1.1rem;
+  }
+}
+
+#ui-widget #htmlOutputWrapper, #ui-widget #build {
+  margin: 30px 0;
+}
+
+#ui-widget label {
+  font-weight: bold;
+}
+
+#ui-widget .template {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

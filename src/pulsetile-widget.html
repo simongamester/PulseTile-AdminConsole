@@ -131,162 +131,333 @@
         <!-- Breadcrumb-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="pulsetile-index.html">Dashboard</a></li>
-          <li class="breadcrumb-item active">Monitor</li>
-          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-item active">UI Widget Generator</li>
         </ol>
         
         
         
-        <div class="container-fluid">
+        <div class="container-fluid" id="ui-widget">
           <div class="animated fadeIn">
             
             
-            
             <div class="row">
-	            
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Build Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">
-						    <thead>
-						        <tr>
-						            <th>Module</th>
-						            <th>Version / Build</th>
-						        </tr>
-						    </thead>
-						    <tbody>
-						        <tr>
-						            <td>Node.js</td>
-						            <td>v6.10.3 / Express.js / socket.io</td>
-						        </tr>
-						        <tr>
-						            <td>Database Interface</td>
-						            <td>Node.js Adaptor for GT.M: Version: 0.9.1 (FWSLC)</td>
-						        </tr>
-						        <tr>
-						            <td>Database</td>
-						            <td> GT.M version: V6.3-001A Linux x86_64</td>
-						        </tr>
-						        <tr>
-						            <td>QEWD</td>
-						            <td>2.24.8</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-qoper8</td>
-						            <td>3.16.0</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-document-store</td>
-						            <td>1.19.1</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-qoper8-express</td>
-						            <td>3.22.0</td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
+	          
+	          <div class="col-sm-12 col-xl-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1 class="display-4">UI Widget Generator</h1>
+                    <p class="lead">Generates a view based the raw date "Qewd Data" and an applied "Schema" within PulseTile. The schema defines the presentation for both the read only edit view within the application.</p>
                 </div>
-              </div>
-              
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Master Process Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">	
-						    <tbody>
-						        <tr>
-						            <td><span aria-describedby="master-process-memory">1908</span></td>
-						            <td class="pushRight"><button aria-describedby="masterProcessShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td>Started</td>
-						            <td class="pushRight">3/21/2018, 3:22:29 PM</td>
-						        </tr>
-						        <tr>
-						            <td>Uptime</td>
-						            <td class="pushRight">34 days 1:20:29</td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Worker Process Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">
-						    <thead>
-						        <tr>
-						            <th>PID</th>
-						            <th>Requests</th>
-						            <th>Available</th>
-						            <th class="pushRight">PoolSize</th>
-						        </tr>
-						    </thead>
-						    <tbody>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">13623</span></td>
-						            <td>7002</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker13623ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">13629</span></td>
-						            <td>2989</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker13629ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">16200</span></td>
-						            <td>238</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker16200ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
+	          </div>
+	          
             </div>
             
+            <form id="build">
+	            
+	            <div class="row">
+		            
+	              <div class="col-sm-12">
+	                <div class="card">
+	                  <div class="card-header">
+	                    <i class="fa fa-sitemap"></i> 1. Select Module
+	                  </div>
+	                  <div class="card-body">
+	                    
+							<div class="form-group">
+								<p>Populates to Data API and Schema with example data.</p>
+								<select class="form-control form-control-lg" id="module">
+									<option value="personalnotes" selected="selected">Personal Notes</option>
+									<option value="orders">Orders</option>
+									<option value="events">Events</option>
+									<option value="testresults">Test Results</option>
+									<option value="procedures">Procedures</option>
+									<option value="vaccinations">Vaccinations</option>
+									<option value="referrals">Referrals</option>
+									<option value="mdt">MDT</option>
+								</select>
+							</div>
+						
+	                  </div>
+	                </div>
+	              </div>
+	                
+	              <div class="col-sm-12 col-lg-6">
+	                <div class="card">
+	                  <div class="card-header">
+	                    <i class="fa fa-code"></i> 2. Qewd to PulseTile Data
+	                  </div>
+	                  <div class="card-body">
+	                   	<div class="form-group">
+							<textarea class="form-control" id="qewd" rows="15"></textarea>
+						</div>
+	                  </div>
+	                </div>
+	                
+	              </div>
+	              
+	              <div class="col-sm-12 col-lg-6">
+	                <div class="card">
+	                  <div class="card-header">
+	                    <i class="fa fa-code"></i> 3. PulseTile UI Schema
+	                  </div>
+	                  <div class="card-body">
+	                   	<div class="form-group">
+							<textarea class="form-control" id="schema" rows="15"></textarea>
+						</div>
+	                  </div>
+	                </div>
+	                
+	              </div>
+	              
+	              <div class="col-sm-12">
+	                <div class="card">
+	                  <div class="card-header">
+	                    <i class="fa fa-play"></i> 4. Build View
+	                  </div>
+	                  <div class="card-body">
+	                    
+					    <button id="build-read" class="btn btn-primary">Build Read View</button>
+					    <button id="build-edit" class="btn btn-primary">Build Edit View</button>
+				    
+	                  </div>
+	                </div>
+	              </div>       
+	              
+	            </div>
+	            <!--/.row-->
             
-            
-            
-          </div>
-        </div>
+	            <div class="row">
+		            
+		            <div class="col-sm-12" id="page">
+		                <div class="card">
+			                
+			                <div class="card-header">
+				                <i class="fa fa-eye"></i> Preview
+			                </div>
+			                <div class="card-body">
+					            
+					            <div>
+<!-- 							    	<form> -->
+								    	<div id="view"></div>
+								    	
+								    	<!-- Personal Notes -->
+								    	<div id="view-personalnotes" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.author}}
+									    	
+									    	{{schema.dateCreated}}
+									    	
+									    	<p>Some additional HTML to display between dynamic fields</p>
+									    	
+									    	{{schema.noteType}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Orders -->
+								    	<div id="view-orders" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.name}}
+									    	
+									    	{{schema.orderDate}}
+									    	
+									    	<p>Some additional HTML to display between dynamic fields</p>
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Events -->
+								    	<div id="view-events" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.name}}
+									    	
+									    	{{schema.type}}
+									    	
+									    	{{schema.typeMultiple}}
+									    	
+									    	{{schema.description}}
+									    	
+									    	{{schema.dateCreated}}
+									    	
+									    	{{schema.dateTime}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Test Results -->
+								    	<div id="view-testresults" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.testName}}
+									    	
+									    	{{schema.sampleTaken}}
+									    	
+									    	{{schema.dateCreated}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Procedures -->
+								    	<div id="view-procedures" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.name}}
+									    	
+									    	{{schema.date}}
+									    	
+									    	{{schema.time}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Vaccinations -->
+								    	<div id="view-vaccinations" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.vaccinationName}}
+									    	
+									    	{{schema.dateCreated}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- Referrals -->
+								    	<div id="view-referrals" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.referralFrom}}
+									    	
+									    	{{schema.referralTo}}
+									    	
+									    	{{schema.dateOfReferral}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<!-- MDT -->
+								    	<div id="view-mdt" class="template">
+									    	<h2>{{module.title}}</h2>
+									    	
+									    	{{schema.dateOfMeeting}}
+									    	
+									    	{{schema.dateOfRequest}}
+									    	
+									    	{{schema.serviceTeam}}
+									    	
+									    	{{schema.source}}
+									    	
+								    	</div>
+								    	
+								    	<button type="submit" class="btn btn-primary">Save Changes</button>
+<!-- 							    	</form> -->
+						    	</div>
+					    	
+						    	<div class="form-group" id="htmlOutputWrapper" style="display: none;">
+									<label for="htmlOutput">HTML</label>
+									<textarea class="form-control" id="htmlOutput" rows="25" readonly="readonly"></textarea>
+								</div>
+								
+			                </div><!--/.card-body-->
+							
+		                </div>
+		            </div>
+	            
+				</div>
+				<!--/.row-->
+			
+				<div class="row">
+		          
+		          <div class="col-sm-12">
+	                <div class="card">
+	                  <div class="card-header">
+		                  <i class="fa fa-info"></i> Instructions
+	                  </div>
+	                  <div class="card-body">
+	                    <p>The following field types have been configured, each with their own set of properties. Use these within the Schema JSON object.</p>
+						
+						
+						<h4>textBox</h4>
+						<dl>
+							<dt>label:</dt>
+							<dd>The label displayed for the field</dd>
+							
+							<dt>value:</dt>
+							<dd>The value provided by qewd</dd>
+							
+							<dt>name:</dt>
+							<dd>The form name for the field. This MUST match a key from the qewd JSON object.</dd>
+						</dl>
+						
+						<h4>textArea</h4>
+						<dl>
+							<dt>label:</dt>
+							<dd>The label displayed for the field</dd>
+							
+							<dt>value:</dt>
+							<dd>The value provided by qewd</dd>
+							
+							<dt>name:</dt>
+							<dd>The form name for the field (edit mode only)</dd>
+						</dl>
+						
+						<h4>calendarBox</h4>
+						<dl>
+							<dt>label:</dt>
+							<dd>The label displayed for the field</dd>
+							
+							<dt>value:</dt>
+							<dd>The value provided by qewd</dd>
+							
+							<dt>name:</dt>
+							<dd>The form name for the field (edit mode only)</dd>
+						</dl>
+						
+						<h4>readOnly</h4>
+						<dl>
+							<dt>label:</dt>
+							<dd>The label displayed for the field</dd>
+							
+							<dt>value:</dt>
+							<dd>The value provided by qewd</dd>
+							
+							<dt>name:</dt>
+							<dd>The form name for the field (edit mode only)</dd>
+						</dl>
+						
+						<h4>selectBox</h4>
+						<p>Displays a drop down select box. Chosen Js can be applied as an option.
+						<dl>
+							<dt>label:</dt>
+							<dd>The label displayed for the field</dd>
+							
+							<dt>value:</dt>
+							<dd>The value provided by qewd</dd>
+							
+							<dt>name:</dt>
+							<dd>The form name for the field (edit mode only)</dd>
+							
+							<dt>options:</dt>
+							<dd>A key-value pair array of options to appears within the drop down. Key = the option value; Value displays the option label.</dd>
+							
+							<dt>chosen:</dt>
+							<dd>Defines whrther the drop down should use chosen.js to display the form element.</dd>
+						</dl>
+	                  </div>
+	                </div>
+	              </div> 
+		          
+	            </div>
         
-        
-        
+			</form>
         
         
       </main>
@@ -444,5 +615,6 @@
     <script src="node_modules/pace-progress/pace.min.js"></script>
     <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
     <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="js/ui-widget.js"></script>
   </body>
 </html>

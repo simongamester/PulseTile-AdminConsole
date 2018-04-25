@@ -29,7 +29,7 @@
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="pulsetile-index.html">
         <img class="navbar-brand-full" src="img/brand/pulsetileheader.png" width="140" height="25" alt="PulseTile Logo">
         <img class="navbar-brand-minimized" src="img/brand/pulsetileheader.png" width="140" height="25" alt="PulseTile Logo">
       </a>
@@ -38,7 +38,7 @@
       </button>
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="pulsetile-index.html">Dashboard</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link" href="#">Users</a>
@@ -48,15 +48,9 @@
         </li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-          <a class="nav-link" href="#">
-            <i class="icon-bell"></i>
-            <span class="badge badge-pill badge-danger">5</span>
-          </a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+            <img class="img-avatar" src="img/avatars/6.jpg" alt="jane@janesmith.com">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
 	        <div class="dropdown-header text-center">
@@ -85,46 +79,50 @@
           <ul class="nav">
             <li class="nav-item">
               <a class="nav-link active" href="pulsetile-index.html">
-                <i class="nav-icon icon-speedometer"></i> Dashboard
+                <i class="nav-icon fa fa-dashboard"></i> Dashboard
               </a>
             </li>
             <li class="divider"></li>
             <li class="nav-title">QEWD</li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-monitor.html" target="_top">
-                <i class="nav-icon icon-star"></i> Monitor</a>
+                <i class="nav-icon fa fa-heartbeat"></i> Monitor</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-sessions.html" target="_top">
-                <i class="nav-icon icon-star"></i> Sessions</a>
+                <i class="nav-icon fa fa-users"></i> Sessions</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-document.html" target="_top">
-                <i class="nav-icon icon-star"></i> Document Store</a>
+                <i class="nav-icon fa fa-database"></i> Document Store</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-content.html" target="_top">
-                <i class="nav-icon icon-star"></i> Content Store</a>
+                <i class="nav-icon fa fa-archive"></i> Content Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pulsetile-content.html" target="_top">
+                <i class="nav-icon fa fa-code"></i> JSON Transformer</a>
             </li>
             <li class="divider"></li>
             <li class="nav-title">PulseTile</li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-widget.html" target="_top">
-                <i class="nav-icon icon-star"></i> Widget Generator</a>
+                <i class="nav-icon fa fa-cube"></i> Widget Generator</a>
             </li>
             <li class="divider"></li>
             <li class="nav-title">Administration</li>
             <li class="nav-item">
               <a class="nav-link" href="pulsetile-users.html">
-                <i class="nav-icon icon-drop"></i> Users</a>
+                <i class="nav-icon fa fa-user"></i> Users</a>
             </li>
             <li class="nav-item nav-dropdown">
               <a class="nav-link" href="pulsetile-startstop">
-                <i class="nav-icon icon-puzzle"></i> Start / Reset</a>
+                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
             </li>
 			<li class="nav-item nav-dropdown">
               <a class="nav-link" href="pulsetile-update">
-                <i class="nav-icon icon-puzzle"></i> Update</a>
+                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
             </li>
           </ul>
         </nav>
@@ -132,91 +130,96 @@
       </div>
       <main class="main">
 	      
-	      
-	      
-        <!-- Breadcrumb-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Admin Console</a>
-          </li>
-          <li class="breadcrumb-item active">Dashboard</li>
-          <!-- Breadcrumb Menu-->
-          <li class="breadcrumb-menu d-md-down-none">
-            <div class="btn-group" role="group" aria-label="Button group">
-              <a class="btn" href="#">
-                <i class="icon-speech"></i>
-              </a>
-              <a class="btn" href="">
-                <i class="icon-graph"></i>  Dashboard</a>
-              <a class="btn" href="">
-                <i class="icon-settings"></i>  Settings</a>
-            </div>
-          </li>
-        </ol>
-        
-        
-        
-        <div class="container-fluid">
+        <div class="container-fluid" id="dashboard">
           <div class="animated fadeIn">
             
             
-            
             <div class="row">
-              
-              <div class="col-sm-6 col-lg-4">
-                <div class="card text-white bg-primary">
-                  <div class="card-body pb-0">
-                    <div class="btn-group float-right">
-                      <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-settings"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="text-value">84</div>
-                    <div>Sessions this Month</div>
-                  </div>
-                  <div class="chart-wrapper mt-3 px-3" style="height:90px;">
-                    <canvas id="card-chart1" class="chart" height="70"></canvas>
-                  </div>
+	          
+	          <div class="col-sm-12 col-xl-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1 class="display-4">Dashboard</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
-              </div>
-              <!--/.col-->
-              <div class="col-sm-6 col-lg-4">
-                <div class="card text-white bg-info">
-                  <div class="card-body">
-                    <div class="h1 text-muted text-right mb-4">
-                      <i class="icon-people"></i>
-                    </div>
-                    <div class="text-value">87.500</div>
-                    <small class="text-muted text-uppercase font-weight-bold">Visitors</small>
-                    <div class="progress progress-white progress-xs mt-3">
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--/.col-->
-              <div class="col-sm-6 col-lg-4">
-                <div class="card text-white bg-primary">
-                  <div class="card-body">
-                    <div class="h1 text-muted text-right mb-4">
-                      <i class="icon-pie-chart"></i>
-                    </div>
-                    <div class="text-value">28%</div>
-                    <small class="text-muted text-uppercase font-weight-bold">Returning Visitors</small>
-                    <div class="progress progress-white progress-xs mt-3">
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
+	          </div>
+	          
             </div>
-            <!--/.row-->
+            
+            <div class="row intro-links">
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-monitor.html">
+			            <h2 class="display-4">
+				            <i class="fa fa-heartbeat"></i><br/>
+				            Monitor
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+		            </div>
+	            </div>
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-sessions.html">
+			            <h2 class="display-4">
+				            <i class="fa fa fa-users"></i><br/>
+				            Sessions
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+			        </div>
+	            </div>
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-document.html">
+			            <h2 class="display-4">
+				            <i class="fa fa fa-database"></i><br/>
+				            Document Store
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+			        </div>
+	            </div>
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-content.html">
+			            <h2 class="display-4">
+				            <i class="fa fa fa-archive"></i><br/>
+				            Content Store
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+			        </div>
+	            </div>
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-jumper.html">
+			            <h2 class="display-4">
+				            <i class="fa fa fa-code"></i><br/>
+				            JSON Transformer
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+			        </div>
+	            </div>
+	            
+	            <div class="col-12 col-md-6 col-xl-4 text-center col">
+		            <div class="container">
+		            <a href="pulsetile-widget.html">
+			            <h2 class="display-4">
+				            <i class="fa fa fa-cube"></i><br/>
+				            Widget Generator
+				        </h2>
+		            </a>
+			        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+			        </div>
+	            </div>
+	            	            
+            </div>
             
             <div class="card">
               <div class="card-body">
@@ -292,6 +295,62 @@
             <!--/.card-->
             
             
+            <div class="row">
+              
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-primary">
+                  <div class="card-body pb-0">
+                    <div class="btn-group float-right">
+                      <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-settings"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="pulsetile-sessions.html">Sessions</a>
+                      </div>
+                    </div>
+                    <div class="text-value">84</div>
+                    <div>Sessions this Month</div>
+                  </div>
+                  <div class="chart-wrapper mt-3 px-3" style="height:90px;">
+                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--/.col-->
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-info">
+                  <div class="card-body">
+                    <div class="h1 text-muted text-right mb-4">
+                      <i class="icon-people"></i>
+                    </div>
+                    <div class="text-value">87.500</div>
+                    <small class="text-muted text-uppercase font-weight-bold">Visitors</small>
+                    <div class="progress progress-white progress-xs mt-3">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.col-->
+              <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-primary">
+                  <div class="card-body">
+                    <div class="h1 text-muted text-right mb-4">
+                      <i class="icon-pie-chart"></i>
+                    </div>
+                    <div class="text-value">28%</div>
+                    <small class="text-muted text-uppercase font-weight-bold">Returning Visitors</small>
+                    <div class="progress progress-white progress-xs mt-3">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!--/.row-->
+            
+            
             
           </div>
         </div>
@@ -318,77 +377,29 @@
         <div class="tab-content">
           <div class="tab-pane active p-3" id="messages" role="tabpanel">
             <div class="message">
-              <div class="py-3 pb-5 mr-3 float-left">
-                <div class="avatar">
-                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-                  <span class="avatar-status badge-success"></span>
-                </div>
-              </div>
               <div>
-                <small class="text-muted">Lukasz Holeczek</small>
+                <small class="text-muted">22-APR-2018</small>
                 <small class="text-muted float-right mt-1">1:52 PM</small>
               </div>
-              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <div class="text-truncate font-weight-bold">Scheduled Maintenance</div>
               <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
             </div>
             <hr>
             <div class="message">
-              <div class="py-3 pb-5 mr-3 float-left">
-                <div class="avatar">
-                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-                  <span class="avatar-status badge-success"></span>
-                </div>
-              </div>
               <div>
-                <small class="text-muted">Lukasz Holeczek</small>
-                <small class="text-muted float-right mt-1">1:52 PM</small>
+                <small class="text-muted">22-APR-2018</small>
+                <small class="text-muted float-right mt-1">1:12 PM</small>
               </div>
-              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <div class="text-truncate font-weight-bold">Scheduled Maintenance</div>
               <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
             </div>
             <hr>
             <div class="message">
-              <div class="py-3 pb-5 mr-3 float-left">
-                <div class="avatar">
-                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-                  <span class="avatar-status badge-success"></span>
-                </div>
-              </div>
               <div>
-                <small class="text-muted">Lukasz Holeczek</small>
-                <small class="text-muted float-right mt-1">1:52 PM</small>
+                <small class="text-muted">29-MAR-2018</small>
+                <small class="text-muted float-right mt-1">9:52 PM</small>
               </div>
-              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
-              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
-            </div>
-            <hr>
-            <div class="message">
-              <div class="py-3 pb-5 mr-3 float-left">
-                <div class="avatar">
-                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-                  <span class="avatar-status badge-success"></span>
-                </div>
-              </div>
-              <div>
-                <small class="text-muted">Lukasz Holeczek</small>
-                <small class="text-muted float-right mt-1">1:52 PM</small>
-              </div>
-              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
-              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
-            </div>
-            <hr>
-            <div class="message">
-              <div class="py-3 pb-5 mr-3 float-left">
-                <div class="avatar">
-                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-                  <span class="avatar-status badge-success"></span>
-                </div>
-              </div>
-              <div>
-                <small class="text-muted">Lukasz Holeczek</small>
-                <small class="text-muted float-right mt-1">1:52 PM</small>
-              </div>
-              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+              <div class="text-truncate font-weight-bold">System Alert</div>
               <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
             </div>
           </div>
@@ -488,8 +499,8 @@
     </div>
     <footer class="app-footer">
       <div>
-        <a href="https://coreui.io">CoreUI</a>
-        <span>&copy; 2018 creativeLabs.</span>
+        <a href="https://pulsetile.com">PulseTile</a>
+        <span>&copy; 2018 Ripple Foundation</span>
       </div>
       <div class="ml-auto">
         <span>Powered by</span>

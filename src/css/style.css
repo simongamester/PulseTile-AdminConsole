@@ -179,14 +179,14 @@ sup {
 }
 
 a {
-  color: #f46631;
+  color: #3aaa35;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #ce400b;
+  color: #267023;
   text-decoration: underline;
 }
 
@@ -2920,12 +2920,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #f46631;
+  color: #3aaa35;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #ce400b;
+  color: #267023;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
@@ -4656,14 +4656,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #f46631;
+  color: #3aaa35;
   background-color: #fff;
   border: 1px solid #c8ced3;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #ce400b;
+  color: #267023;
   text-decoration: none;
   background-color: #e4e7ea;
   border-color: #c8ced3;
@@ -11595,7 +11595,7 @@ canvas {
 }
 
 .sidebar .nav-link.active .nav-icon {
-  color: #f46631;
+  color: #3aaa35;
 }
 
 .sidebar .nav-link:hover {
@@ -14201,7 +14201,7 @@ body {
 }
 
 #dashboard .intro-links a:hover i {
-  color: #f46631;
+  color: #3aaa35;
 }
 
 #dashboard .intro-links .display-4 {
@@ -14240,5 +14240,13 @@ body {
 
 #ui-widget .template {
   display: none;
+}
+
+.card-body.no-padding {
+  padding: 0;
+}
+
+div.jsoneditor {
+  border: none !important;
 }
 /*# sourceMappingURL=style.css.map */

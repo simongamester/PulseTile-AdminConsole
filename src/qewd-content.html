@@ -23,6 +23,9 @@
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/css/pace.min.css" rel="stylesheet">
+    <link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet">
+    
+    <script src="node_modules/jsoneditor/dist/jsoneditor-minimalist.min.js"></script>
   </head>
   <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     <header class="app-header navbar">
@@ -195,12 +198,12 @@
         <!-- Breadcrumb-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-          <li class="breadcrumb-item active">UI Widget Generator</li>
+          <li class="breadcrumb-item active">Content Store</li>
         </ol>
         
         
         
-        <div class="container-fluid" id="ui-widget">
+        <div class="container-fluid">
           <div class="animated fadeIn">
             
             
@@ -208,320 +211,217 @@
 	          
 	          <div class="col-sm-12 col-xl-12">
                 <div class="jumbotron jumbotron-fluid">
-                    <h1 class="display-4">UI Widget Generator</h1>
-                    <p class="lead">Generates a view based the raw date "Qewd Data" and an applied "Schema" within PulseTile. The schema defines the presentation for both the read only edit view within the application.</p>
+                    <h1 class="display-4">Content Store</h1>
+                    <p class="lead">Maintain Stores</p>
                 </div>
 	          </div>
 	          
             </div>
             
-            <form id="build">
-	            
-	            <div class="row">
-		            
-	              <div class="col-sm-12">
-	                <div class="card">
-	                  <div class="card-header">
-	                    <i class="fa fa-sitemap"></i> 1. Select Module
-	                  </div>
-	                  <div class="card-body">
-	                    
-							<div class="form-group">
-								<p>Populates to Data API and Schema with example data.</p>
-								<select class="form-control form-control-lg" id="module">
-									<option value="personalnotes" selected="selected">Personal Notes</option>
-									<option value="orders">Orders</option>
-									<option value="events">Events</option>
-									<option value="testresults">Test Results</option>
-									<option value="procedures">Procedures</option>
-									<option value="vaccinations">Vaccinations</option>
-									<option value="referrals">Referrals</option>
-									<option value="mdt">MDT</option>
-								</select>
-							</div>
-						
-	                  </div>
-	                </div>
-	              </div>
-	                
-	              <div class="col-sm-12 col-lg-6">
-	                <div class="card">
-	                  <div class="card-header">
-	                    <i class="fa fa-code"></i> 2. Qewd to PulseTile Data
-	                  </div>
-	                  <div class="card-body">
-	                   	<div class="form-group">
-							<textarea class="form-control" id="qewd" rows="15"></textarea>
-						</div>
-	                  </div>
-	                </div>
-	                
-	              </div>
-	              
-	              <div class="col-sm-12 col-lg-6">
-	                <div class="card">
-	                  <div class="card-header">
-	                    <i class="fa fa-code"></i> 3. PulseTile UI Schema
-	                  </div>
-	                  <div class="card-body">
-	                   	<div class="form-group">
-							<textarea class="form-control" id="schema" rows="15"></textarea>
-						</div>
-	                  </div>
-	                </div>
-	                
-	              </div>
-	              
-	              <div class="col-sm-12">
-	                <div class="card">
-	                  <div class="card-header">
-	                    <i class="fa fa-play"></i> 4. Build View
-	                  </div>
-	                  <div class="card-body">
-	                    
-					    <button id="build-read" class="btn btn-primary">Build Read View</button>
-					    <button id="build-edit" class="btn btn-primary">Build Edit View</button>
-				    
-	                  </div>
-	                </div>
-	              </div>       
-	              
-	            </div>
-	            <!--/.row-->
             
-	            <div class="row">
-		            
-		            <div class="col-sm-12" id="page">
-		                <div class="card">
-			                
-			                <div class="card-header">
-				                <i class="fa fa-eye"></i> Preview
-			                </div>
-			                <div class="card-body">
-					            
-					            <div>
-<!-- 							    	<form> -->
-								    	<div id="view"></div>
-								    	
-								    	<!-- Personal Notes -->
-								    	<div id="view-personalnotes" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.author}}
-									    	
-									    	{{schema.dateCreated}}
-									    	
-									    	<p>Some additional HTML to display between dynamic fields</p>
-									    	
-									    	{{schema.noteType}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Orders -->
-								    	<div id="view-orders" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.name}}
-									    	
-									    	{{schema.orderDate}}
-									    	
-									    	<p>Some additional HTML to display between dynamic fields</p>
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Events -->
-								    	<div id="view-events" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.name}}
-									    	
-									    	{{schema.type}}
-									    	
-									    	{{schema.typeMultiple}}
-									    	
-									    	{{schema.description}}
-									    	
-									    	{{schema.dateCreated}}
-									    	
-									    	{{schema.dateTime}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Test Results -->
-								    	<div id="view-testresults" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.testName}}
-									    	
-									    	{{schema.sampleTaken}}
-									    	
-									    	{{schema.dateCreated}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Procedures -->
-								    	<div id="view-procedures" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.name}}
-									    	
-									    	{{schema.date}}
-									    	
-									    	{{schema.time}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Vaccinations -->
-								    	<div id="view-vaccinations" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.vaccinationName}}
-									    	
-									    	{{schema.dateCreated}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- Referrals -->
-								    	<div id="view-referrals" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.referralFrom}}
-									    	
-									    	{{schema.referralTo}}
-									    	
-									    	{{schema.dateOfReferral}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<!-- MDT -->
-								    	<div id="view-mdt" class="template">
-									    	<h2>{{module.title}}</h2>
-									    	
-									    	{{schema.dateOfMeeting}}
-									    	
-									    	{{schema.dateOfRequest}}
-									    	
-									    	{{schema.serviceTeam}}
-									    	
-									    	{{schema.source}}
-									    	
-								    	</div>
-								    	
-								    	<button type="submit" class="btn btn-primary">Save Changes</button>
-<!-- 							    	</form> -->
-						    	</div>
-					    	
-						    	<div class="form-group" id="htmlOutputWrapper" style="display: none;">
-									<label for="htmlOutput">HTML</label>
-									<textarea class="form-control" id="htmlOutput" rows="25" readonly="readonly"></textarea>
-								</div>
-								
-			                </div><!--/.card-body-->
-							
-		                </div>
-		            </div>
+            <div class="row">
 	            
-				</div>
-				<!--/.row-->
-			
-				<div class="row">
-		          
-		          <div class="col-sm-12">
-	                <div class="card">
-	                  <div class="card-header">
-		                  <i class="fa fa-info"></i> Instructions
-	                  </div>
-	                  <div class="card-body">
-	                    <p>The following field types have been configured, each with their own set of properties. Use these within the Schema JSON object.</p>
-						
-						
-						<h4>textBox</h4>
-						<dl>
-							<dt>label:</dt>
-							<dd>The label displayed for the field</dd>
-							
-							<dt>value:</dt>
-							<dd>The value provided by qewd</dd>
-							
-							<dt>name:</dt>
-							<dd>The form name for the field. This MUST match a key from the qewd JSON object.</dd>
-						</dl>
-						
-						<h4>textArea</h4>
-						<dl>
-							<dt>label:</dt>
-							<dd>The label displayed for the field</dd>
-							
-							<dt>value:</dt>
-							<dd>The value provided by qewd</dd>
-							
-							<dt>name:</dt>
-							<dd>The form name for the field (edit mode only)</dd>
-						</dl>
-						
-						<h4>calendarBox</h4>
-						<dl>
-							<dt>label:</dt>
-							<dd>The label displayed for the field</dd>
-							
-							<dt>value:</dt>
-							<dd>The value provided by qewd</dd>
-							
-							<dt>name:</dt>
-							<dd>The form name for the field (edit mode only)</dd>
-						</dl>
-						
-						<h4>readOnly</h4>
-						<dl>
-							<dt>label:</dt>
-							<dd>The label displayed for the field</dd>
-							
-							<dt>value:</dt>
-							<dd>The value provided by qewd</dd>
-							
-							<dt>name:</dt>
-							<dd>The form name for the field (edit mode only)</dd>
-						</dl>
-						
-						<h4>selectBox</h4>
-						<p>Displays a drop down select box. Chosen Js can be applied as an option.
-						<dl>
-							<dt>label:</dt>
-							<dd>The label displayed for the field</dd>
-							
-							<dt>value:</dt>
-							<dd>The value provided by qewd</dd>
-							
-							<dt>name:</dt>
-							<dd>The form name for the field (edit mode only)</dd>
-							
-							<dt>options:</dt>
-							<dd>A key-value pair array of options to appears within the drop down. Key = the option value; Value displays the option label.</dd>
-							
-							<dt>chosen:</dt>
-							<dd>Defines whrther the drop down should use chosen.js to display the form element.</dd>
-						</dl>
-	                  </div>
-	                </div>
-	              </div> 
-		          
-	            </div>
+              <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-database"></i> Stores
+                    <div class="card-header-actions">
+	                    <a href="#" class="card-header-action btn-setting">
+		                  <i class="fa fa-plus"></i> Add Store
+	                    </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+	                
+	                <div class="form-group">
+		              <div class="input-group">
+                        <input type="text" id="input1-group1" name="input1-group1" class="form-control" placeholder="Search Stores">
+                        <span class="input-group-append">
+                          <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                      </div>
+				    </div>
+	                
+	                <div class="form-group">
+					    <label class="control-label">Selected Store</label>
+				        <p class="form-control-static">rob</p>
+				    </div>
+				    
+					<div class="form-group">
+						<label class="control-label">Phrase Delimiters:</label>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Subject</label>
+						<p class="form-control-static">~My Subject~</p>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Value</label>
+				        <p class="form-control-static">|My Value|</p>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Unit</label>
+					    <p class="form-control-static">{My Unit}</p>
+					</div>
+	                  
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+              
+              <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-tag"></i> Tags
+                    <div class="card-header-actions">
+	                    <a href="#" class="card-header-action btn-setting">
+		                  <i class="fa fa-plus"></i> Add Tag
+	                    </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+	                
+	                <div class="form-group">
+		              <div class="input-group">
+                        <input type="text" id="input1-group1" name="input1-group1" class="form-control" placeholder="Search Tags">
+                        <span class="input-group-append">
+                          <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                      </div>
+				    </div>
+	                  
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+            </div>
+            
+            
+            <div class="row">
+	            
+              <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-comment"></i> Phrases Tagged
+                    <div class="card-header-actions">
+	                    <a href="#" class="card-header-action btn-setting">
+		                  <i class="fa fa-plus"></i> Add Phrase
+	                    </a>
+                    </div>
+                  </div>
+                  <div class="card-body no-padding">
+	                
+				    <table class="table table-responsive-sm table-hover mb-0">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>Phrase</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Pain came on after swimming</td>
+                          <td class="text-right">
+	                        <div class="btn-group btn-group-sm" role="group" aria-label="Large button group">
+		                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-info"></i></button>
+		                      <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-cut"></i></button>
+		                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-mail-forward"></i></button>
+		                    </div>
+                        </tr>
+                        <tr>
+                          <td>Pain in right ear</td>
+                          <td class="text-right">
+	                        <div class="btn-group btn-group-sm" role="group" aria-label="Large button group">
+		                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-info"></i></button>
+		                      <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-cut"></i></button>
+		                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-mail-forward"></i></button>
+		                    </div>
+                        </tr>
+                        <tr>
+                          <td>Pain in left ear</td>
+                          <td class="text-right">
+	                        <div class="btn-group btn-group-sm" role="group" aria-label="Large button group">
+		                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-info"></i></button>
+		                      <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-cut"></i></button>
+		                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-mail-forward"></i></button>
+		                    </div>
+                        </tr>
+                        <tr>
+                          <td>~Ear Pain~ is {?} /|10|</td>
+                          <td class="text-right">
+	                        <div class="btn-group btn-group-sm" role="group" aria-label="Large button group">
+		                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-info"></i></button>
+		                      <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-cut"></i></button>
+		                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-mail-forward"></i></button>
+		                    </div>
+                        </tr>
+                      </tbody>
+                    </table>
+	                	                  
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+              
+              <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-pencil"></i> Edit / Maintain Phrase
+                  </div>
+                  <div class="card-body">
+	                
+	                <div class="form-group">
+		              <label>Authored Phrase</label>
+		              <div class="input-group">
+                        <input type="text" id="input1-group1" name="input1-group1" class="form-control">
+                        <span class="input-group-append">
+                          <button class="btn btn-secondary" type="button">Update</button>
+                        </span>
+                      </div>
+				    </div>
+	                
+	                <div class="form-group">
+					    <label class="control-label">Displayed Phrase</label>
+				        <p class="form-control-static">rob</p>
+				    </div>
+				    
+					<div class="form-group">
+						<label class="control-label">Subject</label>
+						<p class="form-control-static">before world</p>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Value</label>
+						<p class="form-control-static">* undefined*</p>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">Unit</label>
+				        <p class="form-control-static">* undefined*</p>
+					</div>
+					
+					<h5>Tags</h5>
+					
+                    <button type="button" class="btn btn-outline-primary btn-sm">Tag 1</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm">Tag 2</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm">Tag 3</button>
+                    
+	                
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+            </div>
+              
+            
+            
+          </div>
+        </div>
         
-			</form>
+        
+        
         
         
       </main>
@@ -679,6 +579,5 @@
     <script src="node_modules/pace-progress/pace.min.js"></script>
     <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
     <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
-    <script src="js/ui-widget.js"></script>
   </body>
 </html>

@@ -23,22 +23,25 @@
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/css/pace.min.css" rel="stylesheet">
+    <link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet">
+    
+    <script src="node_modules/jsoneditor/dist/jsoneditor-minimalist.min.js"></script>
   </head>
   <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     <header class="app-header navbar">
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="pulsetile-index.html">
-        <img class="navbar-brand-full" src="img/brand/pulsetileheader.png" width="140" height="25" alt="PulseTile Logo">
-        <img class="navbar-brand-minimized" src="img/brand/pulsetileheader.png" width="140" height="25" alt="PulseTile Logo">
+      <a class="navbar-brand" href="index.html">
+        <img class="navbar-brand-full" src="img/brand/Ripple-Logo.png" alt="PulseTile Logo">
+        <img class="navbar-brand-minimized" src="img/brand/Ripple-Logo.png" alt="PulseTile Logo">
       </a>
       <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
       </button>
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3">
-          <a class="nav-link" href="pulsetile-index.html">Dashboard</a>
+          <a class="nav-link" href="index.html">Dashboard</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link" href="#">Users</a>
@@ -61,7 +64,7 @@
             <a class="dropdown-item" href="#">
               <i class="fa fa-wrench"></i> Settings</a>
             <div class="divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="login.html">
               <i class="fa fa-lock"></i> Logout</a>
           </div>
         </li>
@@ -78,48 +81,112 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="pulsetile-index.html">
+              <a class="nav-link active" href="index.html">
                 <i class="nav-icon fa fa-dashboard"></i> Dashboard
               </a>
             </li>
+            
             <li class="divider"></li>
-            <li class="nav-title">QEWD</li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-monitor.html" target="_top">
-                <i class="nav-icon fa fa-heartbeat"></i> Monitor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-sessions.html" target="_top">
-                <i class="nav-icon fa fa-users"></i> Sessions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-document.html" target="_top">
-                <i class="nav-icon fa fa-code"></i> Document Store</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-content.html" target="_top">
-                <i class="nav-icon fa fa-database"></i> Content Store</a>
-            </li>
-            <li class="divider"></li>
-            <li class="nav-title">PulseTile</li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-widget.html" target="_top">
-                <i class="nav-icon fa fa-cube"></i> Widget Generator</a>
-            </li>
-            <li class="divider"></li>
-            <li class="nav-title">Administration</li>
-            <li class="nav-item">
-              <a class="nav-link" href="pulsetile-users.html">
-                <i class="nav-icon fa fa-user"></i> Users</a>
-            </li>
+            <li class="nav-title">RUN TIME</li>
+            
             <li class="nav-item nav-dropdown">
-              <a class="nav-link" href="pulsetile-startstop">
-                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> PulseTile</a>
+              <ul class="nav-dropdown-items">
+	            <li class="nav-item">
+	              <a class="nav-link" href="pulsetile-users.html">
+	                <i class="nav-icon fa fa-user"></i> Users</a>
+	            </li>
+              	<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-startstop">
+	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
+	            </li>
+				<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-update">
+	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
+	            </li>
+              </ul>
             </li>
-			<li class="nav-item nav-dropdown">
-              <a class="nav-link" href="pulsetile-update">
-                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
+            
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> QEWD</a>
+              <ul class="nav-dropdown-items">
+	            <li class="nav-item">
+	              <a class="nav-link" href="qewd-monitor.html" target="_top">
+	                <i class="nav-icon fa fa-heartbeat"></i> Monitor</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="qewd-sessions.html" target="_top">
+	                <i class="nav-icon fa fa-users"></i> Sessions</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="qewd-document.html" target="_top">
+	                <i class="nav-icon fa fa-database"></i> Document Store</a>
+	            </li>
+              	<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-startstop">
+	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
+	            </li>
+				<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-update">
+	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
+	            </li>
+              </ul>
             </li>
+            
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> EtherCIS</a>
+              <ul class="nav-dropdown-items">
+              	<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-startstop">
+	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
+	            </li>
+				<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-update">
+	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
+	            </li>
+              </ul>
+            </li>
+            
+            <li class="divider"></li>	
+            <li class="nav-title">DESIGN TIME</li>
+            
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> PulseTile</a>
+              <ul class="nav-dropdown-items">
+              	<li class="nav-item">
+	              <a class="nav-link" href="pulsetile-widget.html" target="_top">
+	                <i class="nav-icon fa fa-cube"></i> Widget Generator</a>
+	            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> QEWD</a>
+              <ul class="nav-dropdown-items">
+	            <li class="nav-item">
+	              <a class="nav-link" href="qewd-content.html" target="_top">
+	                <i class="nav-icon fa fa-archive"></i> Content Store</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="qewd-json.html" target="_top">
+	                <i class="nav-icon fa fa-code"></i> JSON Transformer</a>
+	            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> EtherCIS</a>
+              <ul class="nav-dropdown-items">
+              	
+              </ul>
+            </li>
+            
           </ul>
         </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
@@ -130,9 +197,8 @@
 	      
         <!-- Breadcrumb-->
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="pulsetile-index.html">Dashboard</a></li>
-          <li class="breadcrumb-item active">Monitor</li>
-          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item active">JSON Transformer</li>
         </ol>
         
         
@@ -141,145 +207,144 @@
           <div class="animated fadeIn">
             
             
-            
             <div class="row">
-	            
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Build Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">
-						    <thead>
-						        <tr>
-						            <th>Module</th>
-						            <th>Version / Build</th>
-						        </tr>
-						    </thead>
-						    <tbody>
-						        <tr>
-						            <td>Node.js</td>
-						            <td>v6.10.3 / Express.js / socket.io</td>
-						        </tr>
-						        <tr>
-						            <td>Database Interface</td>
-						            <td>Node.js Adaptor for GT.M: Version: 0.9.1 (FWSLC)</td>
-						        </tr>
-						        <tr>
-						            <td>Database</td>
-						            <td> GT.M version: V6.3-001A Linux x86_64</td>
-						        </tr>
-						        <tr>
-						            <td>QEWD</td>
-						            <td>2.24.8</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-qoper8</td>
-						            <td>3.16.0</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-document-store</td>
-						            <td>1.19.1</td>
-						        </tr>
-						        <tr>
-						            <td>ewd-qoper8-express</td>
-						            <td>3.22.0</td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
+	          
+	          <div class="col-sm-12 col-xl-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1 class="display-4">JSON Transformer</h1>
+                    <p class="lead">Defines your JSON Mapping</p>
                 </div>
-              </div>
-              
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Master Process Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">	
-						    <tbody>
-						        <tr>
-						            <td><span aria-describedby="master-process-memory">1908</span></td>
-						            <td class="pushRight"><button aria-describedby="masterProcessShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td>Started</td>
-						            <td class="pushRight">3/21/2018, 3:22:29 PM</td>
-						        </tr>
-						        <tr>
-						            <td>Uptime</td>
-						            <td class="pushRight">34 days 1:20:29</td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="card">
-                  <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Worker Process Details
-                    <div class="card-header-actions">
-                      <a href="http://coreui.io/docs/components/bootstrap-jumbotron/" class="card-header-action" target="_blank">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="overviewTable table">
-						    <thead>
-						        <tr>
-						            <th>PID</th>
-						            <th>Requests</th>
-						            <th>Available</th>
-						            <th class="pushRight">PoolSize</th>
-						        </tr>
-						    </thead>
-						    <tbody>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">13623</span></td>
-						            <td>7002</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker13623ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">13629</span></td>
-						            <td>2989</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker13629ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						        <tr>
-						            <td><span aria-describedby="worker-process-memory">16200</span></td>
-						            <td>238</td>
-						            <td>true</td>
-						            <td class="pushRight"><button aria-describedby="worker16200ShutdownBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></button></td>
-						        </tr>
-						    </tbody>
-						</table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
+	          </div>
+	          
             </div>
             
             
+            <div class="row">
+	            
+              <div class="col-sm-12 col-xl-4">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-code"></i> Example Input Object
+                    <div class="card-header-actions">
+	                    <a href="#" class="card-header-action btn-setting">
+		                  <i class="fa fa-question-circle"></i>
+	                    </a>
+                        <a href="#" id="btnGroupVerticalDrop1" class="dropdown-toggle card-header-action btn-setting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-cog"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="#">Import HL7</a>
+                          <a class="dropdown-item" href="#">Import XML</a>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="card-body no-padding">
+	                  
+	                <div id="jsoneditor1" style="width: 100%; height: 400px;"></div>
+				    <script>
+				        // create the editor
+				        var container = document.getElementById("jsoneditor1");
+				        var options = {};
+				        var editor = new JSONEditor(container, options);
+				
+				        // set json
+				        var json = {
+				            "Array": [1, 2, 3],
+				            "Boolean": true,
+				            "Null": null,
+				            "Number": 123,
+				            "Object": {"a": "b", "c": "d"},
+				            "String": "Hello World"
+				        };
+				        editor.set();
+				
+				        // get json
+				        var json = editor.get();
+				    </script>
+	                  
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+              <div class="col-sm-12 col-xl-4">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-code"></i> Template Object
+                    <div class="card-header-actions">
+                      
+	                    <a href="#" class="card-header-action btn-setting">
+		                  <i class="fa fa-question-circle"></i>
+	                    </a>
+                        <a href="#" id="btnGroupVerticalDrop1" class="dropdown-toggle card-header-action btn-setting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-cog"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="#">Function</a>
+                          <a class="dropdown-item" href="#">Test Your Template</a>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="card-body no-padding">
+	                <div id="jsoneditor2" style="width: 100%; height: 400px;"></div>
+				    <script>
+				        // create the editor
+				        var container = document.getElementById("jsoneditor2");
+				        var options = {};
+				        var editor = new JSONEditor(container, options);
+				
+				        // set json
+				        var json = {
+				            "Array": [1, 2, 3],
+				            "Boolean": true,
+				            "Null": null,
+				            "Number": 123,
+				            "Object": {"a": "b", "c": "d"},
+				            "String": "Hello World"
+				        };
+				        editor.set();
+				
+				        // get json
+				        var json = editor.get();
+				    </script>
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+              <div class="col-sm-12 col-xl-4">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-code"></i> Example Output
+                  </div>
+                  <div class="card-body no-padding">
+	                <div id="jsoneditor3" style="width: 100%; height: 400px;"></div>
+				    <script>
+				        // create the editor
+				        var container = document.getElementById("jsoneditor3");
+				        var options = {};
+				        var editor = new JSONEditor(container, options);
+				
+				        // set json
+				        var json = {
+				            "Array": [1, 2, 3],
+				            "Boolean": true,
+				            "Null": null,
+				            "Number": 123,
+				            "Object": {"a": "b", "c": "d"},
+				            "String": "Hello World"
+				        };
+				        editor.set();
+				
+				        // get json
+				        var json = editor.get();
+				    </script>
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              
+            </div>
+              
             
             
           </div>
@@ -429,8 +494,8 @@
     </div>
     <footer class="app-footer">
       <div>
-        <a href="https://coreui.io">CoreUI</a>
-        <span>&copy; 2018 creativeLabs.</span>
+        <a href="https://pulsetile.com">PulseTile</a>
+        <span>&copy; 2018 Ripple Foundation</span>
       </div>
       <div class="ml-auto">
         <span>Powered by</span>

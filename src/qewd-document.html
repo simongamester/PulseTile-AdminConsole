@@ -41,7 +41,7 @@
           <a class="nav-link" href="index.html">Dashboard</a>
         </li>
         <li class="nav-item px-3">
-          <a class="nav-link" href="#">Users</a>
+          <a class="nav-link" href="users.html">Users</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link" href="#">Settings</a>
@@ -78,9 +78,13 @@
         <nav class="sidebar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">
+              <a class="nav-link" href="index.html">
                 <i class="nav-icon fa fa-dashboard"></i> Dashboard
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pulsetile-users.html">
+                <i class="nav-icon fa fa-user"></i> Users</a>
             </li>
             
             <li class="divider"></li>
@@ -90,16 +94,12 @@
               <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-puzzle"></i> PulseTile</a>
               <ul class="nav-dropdown-items">
-	            <li class="nav-item">
-	              <a class="nav-link" href="pulsetile-users.html">
-	                <i class="nav-icon fa fa-user"></i> Users</a>
-	            </li>
               	<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-startstop">
+	              <a class="nav-link" href="pulsetile-startstop.html">
 	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
 	            </li>
 				<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-update">
+	              <a class="nav-link" href="pulsetile-update.html">
 	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
 	            </li>
               </ul>
@@ -122,11 +122,11 @@
 	                <i class="nav-icon fa fa-database"></i> Document Store</a>
 	            </li>
               	<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-startstop">
+	              <a class="nav-link" href="qewd-startstop.html">
 	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
 	            </li>
 				<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-update">
+	              <a class="nav-link" href="qewd-update.html">
 	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
 	            </li>
               </ul>
@@ -137,11 +137,11 @@
                 <i class="nav-icon icon-puzzle"></i> EtherCIS</a>
               <ul class="nav-dropdown-items">
               	<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-startstop">
+	              <a class="nav-link" href="ethercis-startstop.html">
 	                <i class="nav-icon fa fa-refresh"></i> Start / Reset</a>
 	            </li>
 				<li class="nav-item">
-	              <a class="nav-link" href="pulsetile-update">
+	              <a class="nav-link" href="ethercis-update.html">
 	                <i class="nav-icon fa fa-cloud-download"></i> Update</a>
 	            </li>
               </ul>
@@ -195,7 +195,8 @@
         <!-- Breadcrumb-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-          <li class="breadcrumb-item active">Sessions</li>
+          <li class="breadcrumb-item">QEWD</li>
+          <li class="breadcrumb-item active">Document Store</li>
         </ol>
         
         
@@ -203,10 +204,19 @@
         <div class="container-fluid">
           <div class="animated fadeIn">
             
-            
+            <div class="row">
+	          
+	          <div class="col-sm-12 col-xl-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1 class="display-4">Document Store</h1>
+<!--                     <p class="lead">Defines your JSON Mapping</p> -->
+                </div>
+	          </div>
+	          
+            </div>
             
             <div class="row">
-              <div class="col-sm-12 col-xl-6">
+              <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
                     <i class="fa fa-align-justify"></i> Stores
@@ -216,38 +226,63 @@
                     </div>
                   </div>
                   <div class="card-body">
-	                <form class="form">
-					    <select class="form-control">
-						    <option value="rob">rob</option>
-						    <option value="ts">ts</option>
-					    </select>
-					    
-						<hr>
-						
-					    <div class="form-group">
-						    <label class="control-label">Selected Store</label>
-					        <p class="form-control-static">rob</p>
-					    </div>
-					    
-						<div class="form-group">
-							<label class="control-label">Phrase Delimiters:</label>
-						</div>
-						
-						<div class="form-group">
-							<label class="control-label">Subject</label>
-							<p class="form-control-static">~My Subject~</p>
-						</div>
-						
-						<div class="form-group">
-							<label class="control-label">Value</label>
-					        <p class="form-control-static">|My Value|</p>
-						</div>
-						
-						<div class="form-group">
-							<label class="control-label">Unit</label>
-						    <p class="form-control-static">{My Unit}</p>
-						</div>
-	                </form>
+					<ul id="sessions">
+						<li><a href="">CacheTempEWDSession:{} <span>3 items</a>
+							<ul>
+								<li><a href="">session: --></a></li>
+								<li><a href="">sessionNo:31806</a></li>
+								<li><a href="">sessionsByToken: --></a></li>
+							</ul>
+						</li>
+						<li><a href="">qewdContentStore:{} <span>1 item</a>
+							<ul>
+								<li><a href="">store:{} 2 items</a>
+									<ul>
+										<li><a href="">rob: --></a></li>
+										<li><a href="">ts: --></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="">rippleClinStatements:{} <span>7 items</a>
+							<ul>
+								<li><a href="">byDateCreated: --></a></li>
+								<li><a href="">byPatient: --></a></li>
+								<li><a href="">bySourceId: --></a></li>
+								<li><a href="">bySubject: --></a></li>
+								<li><a href="">byTag: --></a></li>
+								<li><a href="">byUnit: --></a></li>
+								<li><a href="">byValue: --></a></li>
+							</ul>
+						</li>
+						<li><a href="">rippleConfig:{} <span>1 item</a>
+							<ul>
+								<li><a href="">ui: --></a></li>
+							</ul>
+						</li>
+						<li><a href="">rippleEhrIdMap:{} <span>2 items</a>
+							<ul>
+								<li><a href="">ethercis: --></a></li>
+								<li><a href="">marand: --></a></li>
+							</ul>
+						</li>
+						<li><a href="">rippleGPs:{} <span>99 items</a>
+							<ul>
+								<li><a href="">1:{} <span>8 items</span></a>
+									<ul>
+										<li><span class="key">address_1:</span><span class="value">Hamilton Practice</span></li>
+										<li><span class="key">address_2:</span><span class="value">5544 Ante Street</span></li>
+										<li><span class="key">address_3:</span><span class="value">Hamilton</span></li>
+										<li><span class="key">address_4:</span><span class="value">Lanarkshire</span></li>
+										<li><span class="key">address_5:</span><span class="value"></span></li>
+										<li><span class="key">gp_name:</span><span class="value">Goff Carolyn D.</span></li>
+										<li><span class="key">id:</span><span class="value">1</span></li>
+										<li><span class="key">postcode:</span><span class="value">N06 5LP</span></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
                   </div>
                 </div>
               </div>

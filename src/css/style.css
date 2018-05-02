@@ -14178,8 +14178,9 @@ body {
 }
 
 .jumbotron-fluid {
-  padding: 2rem 0 0 0;
+  padding: 0 0 0 0;
   padding-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 #dashboard .intro-links {
@@ -14248,5 +14249,53 @@ body {
 
 div.jsoneditor {
   border: none !important;
+}
+
+table.table-white tbody {
+  background-color: #fff;
+}
+
+#sessions {
+  font-family: monospace;
+  font-size: 14px;
+  padding-left: 0;
+}
+
+#sessions li {
+  list-style: none;
+}
+
+#sessions a:hover {
+  text-decoration: none;
+}
+
+#sessions > li > a {
+  color: #bb5050;
+  font-weight: 600;
+}
+
+#sessions > li > ul {
+  margin-bottom: 10px;
+}
+
+#sessions > li > ul > li > a {
+  color: #505099;
+  font-weight: 600;
+}
+
+#sessions a > span {
+  color: #b0b0b0;
+}
+
+#sessions span {
+  font-weight: 600;
+}
+
+#sessions span.key {
+  color: #bb5050;
+}
+
+#sessions span.value {
+  color: #505099;
 }
 /*# sourceMappingURL=style.css.map */
